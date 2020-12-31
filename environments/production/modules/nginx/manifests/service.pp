@@ -6,7 +6,7 @@
 #   include nginx::service
 class nginx::service {
    service { 'nginx_service':
-      name => 'nginx',
+      name => $service_name,
       ensure => 'running',
       enable => true,
       hasrestart => true,
