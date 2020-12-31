@@ -9,6 +9,6 @@ class nginx::install (
 ) inherits nginx::params {
    package { 'install_nginx':
       name => $package_name,
-      ensure => 'present',
+      ensure => 'absent',
    }
 }
