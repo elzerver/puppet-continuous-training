@@ -7,9 +7,9 @@
 class nginx {
    contain nginx::install
    contain nginx::config
-   # contain nginx::service
+   contain nginx::service
 
    Class['nginx::install']
    -> Class['nginx::config']
-   # ~> Class['nginx::service']
+   ~> Class['nginx::service']
 }
