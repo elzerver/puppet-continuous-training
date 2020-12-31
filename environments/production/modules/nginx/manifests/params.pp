@@ -10,12 +10,12 @@ class nginx::params {
 }
 
 case $::osfamily {
-  'RedHat': {
-    $config_path = '/etc/nginx/nginx.conf'
-    $config_source = 'puppet:///modules/nginx/rh-nginx.conf'
+    'RedHat': {
+      $config_path = '/etc/nginx/nginx.conf'
+      $config_source = 'puppet:///modules/nginx/rh-nginx.conf'
+    }
+    'Debian': {
+      $config_path = '/etc/nginx/nginx.conf'
+      $config_source = 'puppet:///modules/nginx/deb-nginx.conf'
+    }
   }
-  'Debian': {
-    $config_path = '/etc/nginx/nginx.conf'
-    $config_source = 'puppet:///modules/nginx/deb-nginx.conf'
-  }
-}
