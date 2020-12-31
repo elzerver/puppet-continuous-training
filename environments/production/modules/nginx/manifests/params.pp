@@ -1,15 +1,14 @@
-# @summary A short summary of the purpose of this class
+# Store OS specific parameters
 #
-# A description of what this class does
+# @Summary Store OS specific parameters
 #
 # @example
 #   include nginx::params
 class nginx::params {
   $package_name = 'nginx'
   $service_name = 'nginx'
-}
-
-case $::osfamily {
+  
+  case $::osfamily {
     'RedHat': {
       $config_path = '/etc/nginx/nginx.conf'
       $config_source = 'puppet:///modules/nginx/rh-nginx.conf'
@@ -19,3 +18,4 @@ case $::osfamily {
       $config_source = 'puppet:///modules/nginx/deb-nginx.conf'
     }
   }
+}
