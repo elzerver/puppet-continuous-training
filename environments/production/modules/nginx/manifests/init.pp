@@ -12,8 +12,8 @@ class nginx (
    String $package_ensure,
    String $config_ensure,
    String $service_ensure,
-   Boolean $service_enable
-   Boolean $service_restart
+   Boolean $service_enable,
+   Boolean $service_restart,
 ) inherits nginx::params {
    contain nginx::install
    contain nginx::config
