@@ -1,4 +1,4 @@
 node puppetnode.localdomain {
-  # class { 'awscli': }
+  class { 'awscli': }
   class { 'nginx': }
 }
