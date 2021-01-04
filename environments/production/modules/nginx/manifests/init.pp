@@ -23,7 +23,7 @@ class nginx (
    contain nginx::install
    contain nginx::config
    contain nginx::service
-   contain::nginx::vhosts
+   contain nginx::vhosts
 
    Class['nginx::install']
    -> Class['nginx::config']
