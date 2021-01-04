@@ -10,7 +10,7 @@ class nginx::vhosts (
   file { "${nginx::vhost_name}.conf":
      content => epp('nginx/vhosts.conf.epp'),
      ensure => $nginx::vhost_ensure,
-     path => "${vhost_dir}/${nginx::vhost_name}.conf"
+     path => "${vhost_dir}/${nginx::vhost_name}.conf",
   }
 
   file { "$nginx::vhosts_root":
