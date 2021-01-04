@@ -11,7 +11,7 @@ class nginx::config (
    file { 'nginx_config':
       path  => $config_path,
       source => $config_source,
-      ensure => 'present',
+      ensure => $nginx::config_ensure,
       notify => Service['nginx_service'],
    }
 }
