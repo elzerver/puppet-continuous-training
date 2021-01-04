@@ -12,6 +12,7 @@ class nginx::vhosts (
      ensure => $nginx::vhost_ensure,
      path => "${vhost_dir}/${nginx::vhost_name}.conf"
   }
-  file "$nginx::vhosts_root":
+
+  file { "$nginx::vhosts_root":
      ensure => 'directory',
 }
