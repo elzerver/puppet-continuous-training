@@ -16,3 +16,4 @@ class nginx::vhosts (
   file { "$nginx::vhosts_root":
     ensure => 'directory',
   }
+}
